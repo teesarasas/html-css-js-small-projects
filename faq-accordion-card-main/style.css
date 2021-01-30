@@ -1,0 +1,181 @@
+:root {
+  /* text */
+  --darkBlue: hsl(238, 29%, 16%);
+  --softRed: hsl(14, 88%, 65%);
+  --veryDarkGrayBlue: hsl(237, 12%, 33%);
+  --darkGrayBlue: hsl(240, 6%, 50%);
+
+  /* gradient */
+  --softViolet: hsl(273, 75%, 66%);
+  --softBlue: hsl(240, 73%, 65%); 
+
+  /* divider */
+  --lighrGrayBlue: hsl(240, 5%, 91%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, var(--softViolet), var(--softBlue));
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+}
+
+.attribution { 
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  background-color: white;
+  width: 1100px;
+  height: 600px;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.image-container {
+  position: relative;
+}
+
+#pattern {
+  margin-top: -700px;
+  margin-left: -580px;
+}
+
+#woman {
+  position: relative;
+  margin-top: 70px;
+  margin-left: -100px;
+  z-index: 10;
+}
+
+.outer {
+  position: absolute;
+  left: -120px;
+  top: 190px;
+  z-index: 30;
+}
+
+.inner {
+  position: absolute;
+  overflow: hidden;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 100px;
+}
+
+.faq-divider .panel {
+  transition: all 0.3s ease;
+}
+
+.faq-container .faq-divider {
+  border-bottom: 1px solid var(--lighrGrayBlue);
+}
+
+.faq-container h2 {
+  font-size: 32px;
+  color: var(--darkBlue);
+}
+
+.faq-container h4 {
+  font-weight: normal;
+}
+
+.accordion {
+  color: var(--darkGrayBlue);
+  font-size: 16px;
+}
+
+.accordion img {
+  float: right;
+}
+
+.accordion:hover {
+  color: var(--softRed);
+  cursor: pointer;
+}
+
+.faq-divider.active .accordion {
+  color: var(--darkBlue);
+  font-weight: bold;
+}
+
+.arrow {
+  transition: 0.2s ease;
+}
+
+.faq-divider.active .arrow {
+  transform: rotate(180deg);
+}
+
+.panel {
+  display: none;
+}
+
+.faq-divider.active .panel {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90vw;
+    display: flex;
+  }
+
+  .faq-container {
+    padding: 0 0 0 20px;
+  }
+
+  .faq-divider {
+    width: 280px;
+  }
+
+  .faq-container h2 {
+    text-align: center;
+  }
+
+  .faq-container h4 {
+    font-size: 14px;
+  }
+
+  .outer {
+    display: none;
+  }
+
+  .inner {
+    
+    overflow: visible;
+  }
+  
+  #woman {
+    top: -180px;
+    left: 70%;
+  }
+
+  #pattern {
+    position: absolute;
+    margin: -270px 0 0 25%;
+  }
+}
