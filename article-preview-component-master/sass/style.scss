@@ -1,0 +1,192 @@
+$darkGrayishBlue: hsl(217, 19%, 35%);
+$darkBlue: hsl(214, 17%, 51%);
+$grayishBlue: hsl(212, 23%, 69%);
+$lightGrayishBlue: hsl(210, 46%, 95%);
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.3rem;
+  padding: 1rem;
+  background-color: $lightGrayishBlue;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 18rem 1fr;
+  position: relative;
+  overflow: hidden;
+
+  &__image {
+    overflow: hidden;
+    background-image: url('./images/drawers.jpg');
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__content {
+    background-color: white;
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    overflow: hidden;
+    padding: 0 3.5rem;
+  }
+
+  &__header {
+    color: $darkGrayishBlue;
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin-top: 3.5rem;
+  }
+
+  &__text {
+    color: $darkBlue;
+    opacity: 0.9;
+    letter-spacing: 0.1rem;
+    line-height: 1.7rem;
+    font-size: 1.15rem;
+  }
+
+  &__footer {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__image {
+      border-radius: 50%;
+      width: 3.5rem;
+      margin-right: 1.5rem;
+      float: left;
+    }
+
+    & p {
+      margin-left: -8rem;
+    }
+
+    &__btn {
+      background-color: $lightGrayishBlue;
+      width: 3rem;
+      height: 3rem;
+      z-index: 10;
+      border-radius: 50%;
+      transition: all 0.4s ease;
+      position: relative;
+
+      & #share {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__social {
+    background-color: $darkGrayishBlue;
+    padding: 1.2rem 3.5rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin-bottom: 0;
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    position: absolute;
+    bottom: -7rem;
+    width: 100%;
+
+    p {
+      letter-spacing: 0.5rem;
+      color: $grayishBlue;
+      margin-right: 2rem;
+      font-size: 1.15rem;
+      opacity: 0.8;
+    }
+
+    &__icon a:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+.container__social.active {
+  bottom: 0;
+}
+
+.container__footer__btn.dark {
+  background-color: $grayishBlue;
+}
+
+.container__footer__btn.dark a svg path {
+  fill: $lightGrayishBlue;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $darkGrayishBlue;
+}
+
+.date {
+  font-size: 1.2rem;
+  color: $grayishBlue;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    grid-template-rows: 1fr;
+    grid-template-columns: 27rem 40rem;
+  
+    &__image {
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 1.25rem;
+      background-position: left 30%;
+    }
+
+    &__content {
+      border-bottom-left-radius: 0rem;
+      border-bottom-right-radius: 1.25rem;
+      border-top-right-radius: 1.25rem;
+    }
+
+    &__header {
+      font-size: 0.9rem;
+    }
+  
+    &__text {
+      letter-spacing: 0;
+      line-height: 1.7rem;
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+  
+    &__footer {
+      & p {
+        margin-left: -15rem;
+      }
+    }
+
+    &__social {
+      grid-column: 2 / 3;
+      border-bottom-left-radius: 0rem;
+    }
+  }
+}
