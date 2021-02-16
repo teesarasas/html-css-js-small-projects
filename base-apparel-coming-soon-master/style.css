@@ -1,0 +1,84 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+body {
+  font-size: 62.5%;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(135deg, white, #fff5f5);
+  height: 100vw; }
+
+.main__container__header {
+  margin: 2rem; }
+  .main__container__header--logo img {
+    width: 5.5rem; }
+
+.main__container__hero {
+  margin-bottom: 4rem; }
+
+.main__container__content {
+  text-align: center; }
+  .main__container__content--header {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: #413a3a; }
+  .main__container__content--header .header-style {
+    color: #ce9797;
+    font-weight: 300; }
+  .main__container__content--text {
+    color: #ce9797;
+    margin: 0 2rem;
+    font-size: 0.9rem;
+    line-height: 1.4rem; }
+  .main__container__content--email {
+    margin: 0 2rem;
+    position: relative;
+    transition: all 0.3s ease; }
+    .main__container__content--email .form__control input {
+      border: 1px solid #ce9797;
+      background: none;
+      border-radius: 2rem;
+      padding-left: 1.5rem;
+      height: 2.5rem;
+      width: 100%;
+      position: absolute;
+      right: 0; }
+    .main__container__content--email .form__control input:focus {
+      outline: none; }
+    .main__container__content--email .form__control input::placeholder {
+      color: #ce9797; }
+    .main__container__content--email .btn button {
+      position: absolute;
+      width: 4rem;
+      height: 2.5rem;
+      right: 0;
+      background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+      border-radius: 2rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0.3rem 0.8rem 0 rgba(0, 0, 0, 0.2); }
+    .main__container__content--email small {
+      position: absolute;
+      left: 0;
+      bottom: -3.5rem;
+      margin-left: 1.5rem;
+      color: #f96262;
+      font-size: 0.6rem;
+      letter-spacing: 0.1px;
+      visibility: hidden; }
+    .main__container__content--email .form__control.error small {
+      visibility: visible; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }

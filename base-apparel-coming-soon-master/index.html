@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+</head>
+<body>
+  <div class="main__container">
+    <div class="main__container__header">
+      <header>
+        <div class="main__container__header--logo">
+          <img src="./images/logo.svg" alt="">
+        </div>
+      </header>
+    </div>
+
+    <main>
+      <div class="main__container__hero">
+        <section>
+          <div class="main__container__hero--image">
+            <picture>
+              <source media="(max-width:650px)" srcset="./images/hero-mobile.jpg" >
+                <img src="./images/hero-desktop.jpg" alt="a women">
+            </picture>
+          </div>
+        </section>
+      </div>
+
+      <div class="main__container__content">
+        <div class="main__container__content--header">
+          <h1>
+            <span class="header-style">We're</span> coming soon
+          </h1>
+        </div>
+        <div class="main__container__content--text">
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion store. 
+  Add your email below to stay up-to-date with announcements and our launch deals.
+          </p>
+        </div>
+        <div class="main__container__content--email">
+          <form action="" id="form">
+            <div class="form__control">
+              <input type="text" placeholder="Email Address" id="email"
+                required>
+                <small>Please provide valid email</small>
+            </div>
+            <div class="btn">
+              <button type="submit">
+                <img src="./images/icon-arrow.svg" alt="arrow">
+              </button>
+            </div>
+          </form>
+          
+        </div>
+          
+    
+      </div>
+    </main>
+    
+  </div>
+  
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Suwat Traichiraarporn</a>.
+    </p>
+  </footer> -->
+  <script src="script.js"></script>
+</body>
+</html>

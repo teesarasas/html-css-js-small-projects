@@ -1,0 +1,134 @@
+//color template
+
+//primary
+$desaturatedRed: hsl(0, 36%, 70%);
+$softRed: hsl(0, 93%, 68%);
+
+//Neutral
+
+$darkGrayishRed: hsl(0, 6%, 24%);
+
+//Gradients
+
+$linearRedLight: linear-gradient(135deg,hsl(0, 0%, 100%),hsl(0, 100%, 98%));
+$linearRedMedium: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  background: $linearRedLight;
+  height: 100vw;
+}
+
+.main__container {
+  &__header {
+    margin: 2rem;
+    
+
+    &--logo img {
+      width: 5.5rem;
+    }
+  }
+
+  &__hero {
+    margin-bottom: 4rem;
+  }
+
+  &__content {
+    text-align: center;
+
+    &--header {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      color: $darkGrayishRed;
+      
+    }
+
+    &--header .header-style {
+      color: $desaturatedRed;
+      font-weight: 300;
+    }
+
+    &--text {
+      color: $desaturatedRed;
+      margin: 0 2rem;
+      font-size: 0.9rem;
+      line-height: 1.4rem;
+    }
+
+    &--email {
+      margin: 0 2rem;
+      position: relative;
+      transition: all 0.3s ease;
+
+      .form__control input {
+        border: 1px solid $desaturatedRed;
+        background: none;
+        border-radius: 2rem;
+        padding-left: 1.5rem;
+        height: 2.5rem;
+        width: 100%;
+        position: absolute;
+        right: 0;
+      }
+
+      .form__control input:focus {
+        outline: none;
+      }
+
+      .form__control input::placeholder {
+        color: $desaturatedRed;
+      }
+
+      .btn button{
+        position: absolute;
+        width: 4rem;
+        height: 2.5rem;
+        right: 0;
+        background: $linearRedMedium;
+        border-radius: 2rem;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 0.3rem 0.8rem 0 rgba(0, 0, 0, .2);
+      }
+
+      small {
+        position: absolute;
+        left: 0;
+        bottom: -3.5rem;
+        margin-left: 1.5rem;
+        color: $softRed;
+        font-size: 0.6rem;
+        letter-spacing: 0.1px;
+        visibility: hidden;
+      }
+
+      .form__control.error small {
+        visibility: visible;
+      }
+
+    }
+  }
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}

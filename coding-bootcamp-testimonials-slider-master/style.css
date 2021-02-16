@@ -1,0 +1,90 @@
+html {
+  font-size: 62.5%; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.2rem;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background-image: url("./images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: bottom; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }
+
+.main__container {
+  display: flex;
+  overflow: hidden; }
+  .main__container__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("./images/pattern-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top 1rem center;
+    background-size: 34rem 35rem;
+    min-width: 100%;
+    transition: all 0.3s ease; }
+    .main__container__slide--image {
+      margin-top: 5rem;
+      position: relative;
+      width: 28rem;
+      height: 28rem;
+      border-radius: 1rem;
+      box-shadow: -5px 20px 30px 0px rgba(0, 0, 0, 0.2); }
+      .main__container__slide--image--container {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem; }
+        .main__container__slide--image--container img {
+          width: 100%; }
+      .main__container__slide--image--btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -2.5rem;
+        background-color: white;
+        width: 9rem;
+        height: 5rem;
+        border-radius: 3rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        .main__container__slide--image--btn img {
+          width: 1rem;
+          cursor: pointer; }
+    .main__container__slide--body {
+      background-image: url("./images/pattern-quotes.svg");
+      background-position: top 6rem center;
+      background-repeat: no-repeat;
+      background-size: 5.5rem 5rem;
+      padding-top: 7rem;
+      text-align: center;
+      width: 80%;
+      font-size: 1.7rem;
+      font-weight: 300;
+      color: #202046;
+      margin-bottom: 0; }
+    .main__container__slide--footer {
+      text-align: center; }
+      .main__container__slide--footer .name {
+        color: #202046;
+        font-size: 1.5rem;
+        font-weight: 700; }
+      .main__container__slide--footer .career {
+        color: #babacf;
+        font-size: 1.3rem; }
+      .main__container__slide--footer p {
+        margin-top: 0;
+        line-height: 1.5rem; }
