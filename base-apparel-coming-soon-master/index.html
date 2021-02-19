@@ -20,7 +20,6 @@
       </header>
     </div>
 
-    <main>
       <div class="main__container__hero">
         <section>
           <div class="main__container__hero--image">
@@ -45,24 +44,20 @@
           </p>
         </div>
         <div class="main__container__content--email">
-          <form action="" id="form">
+          <form id="form">
             <div class="form__control">
-              <input type="text" placeholder="Email Address" id="email"
-                required>
-                <small>Please provide valid email</small>
-            </div>
-            <div class="btn">
-              <button type="submit">
-                <img src="./images/icon-arrow.svg" alt="arrow">
-              </button>
+              <div class="email__container">
+                <input type="text" placeholder="Email Address" id="email">
+              <span id="icon"><img src="./images/icon-error.svg" alt="error icon"></span>
+                <button class="btn" type="submit">
+                  <img src="./images/icon-arrow.svg" alt="arrow">
+                </button>
+              </div>
+              <small>Please provide valid email</small>
             </div>
           </form>
-          
         </div>
-          
-    
       </div>
-    </main>
     
   </div>
   
