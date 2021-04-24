@@ -1,0 +1,128 @@
+//Primary
+
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+
+//Accent
+
+$blue: hsl(248, 32%, 49%);
+
+//Neutral
+
+$darkBlue: hsl(249, 10%, 26%);
+$grayishBlue: hsl(246, 25%, 77%);
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+//font-weight: 400/500/600/700
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  color: white;
+  background-color: $red;
+  background-image: url('./images/bg-intro-mobile.png')
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 5rem;
+
+  .header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .subcription {
+    background-color: $blue;
+    width: 100%;
+    height: 8rem;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1.5rem 7rem;
+    box-shadow: 0 0.75rem rgba($color: $darkBlue, $alpha: 0.2);
+    margin-bottom: 3rem;
+    font-weight: 600;
+
+    aside {
+      font-weight: 800;
+    }
+
+    .light-text {
+      font-weight: 200;
+      opacity: 0.8;
+    }
+  }
+
+  #form {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: black;
+
+    .form-control {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin-top: 1.5rem;
+
+      label {
+        display: inline-block;
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+      }
+
+      .input-icon {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        input {
+          font-size: 1.5rem;
+          width: 100%;
+          padding: 1em 1.5em;
+          font-weight: 700;
+          border: 0.5px solid $grayishBlue;
+          border-radius: 5px;
+          opacity: 0.8;
+        }
+  
+        svg {
+          position: absolute;
+          right: 2rem;
+        }
+      }
+
+      small {
+        margin-top: 0.5em;
+        color: $red;
+        font-style: italic;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+
